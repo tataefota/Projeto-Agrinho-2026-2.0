@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>A Magia da Festa Junina</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap&quot; rel="stylesheet" />
+</head>
+<body>
+  <!-- Cabeçalho -->
+ <header class="cabecalho">
+  <img src="img/hero1.png" alt="Festa Junina Encantada" />
+  <div class="overlay"></div>
+
+  <div class="titulo">
+    <h1>A Magia da Festa Junina</h1>
+    <p>Entre bandeirinhas, sabores e alegria</p>
+  </div>
+
+  <!-- 🔥 Fogueira animada -->
+  <div class="fogueira">
+    <div class="chama chama1"></div>
+    <div class="chama chama2"></div>
+    <div class="chama chama3"></div>
+    <div class="troncos">
+      <div class="tronco"></div>
+      <div class="tronco"></div>
+    </div>
+  </div>
+</header>
+
+  <!-- Seção História -->
+ <section class="historia">
+    <h2>🌽 A História da Festa</h2>
+    <div class="conteudo">
+      <img src="img/historia.png" alt="História da Festa" />
+      <p>Esse é o espírito da Festa Junina, uma das celebrações mais tradicionais do Brasil,
+         que tem raízes nas festas dos santos católicos — especialmente São João, São Pedro e Santo Antônio — trazidas
+         pelos portugueses durante o período colonial. Originalmente realizadas no interior do país como forma de agradecer
+          pela colheita, essas festas ganharam força e identidade própria ao longo dos séculos, misturando elementos da
+          cultura europeia com ritmos, danças e sabores tipicamente brasileiros.</p>
+    </div>
+    <div class="balao">
+  Você sabia? A Festa Junina tem origem europeia, mas foi adaptada pelos povos do campo no Brasil!
+</div>
+ <div class="conteudo">
+      <img src="img/hero2.png" alt="História da Festa" />
+      <p>Hoje, as festas juninas não estão mais restritas ao campo. Elas invadiram as cidades de norte a sul do Brasil,
+        transformando ruas, escolas e praças em cenários de arraial, com quadrilhas animadas, bandeirinhas coloridas,
+        fogueiras simbólicas e comidas típicas como canjica, pamonha, quentão e bolo de fubá. A cena na imagem,
+        com pessoas dançando ao redor da fogueira sob o céu decorado com bandeirolas, simboliza essa tradição viva,
+        que une gerações em torno da música, da fé e da alegria popular.</p>
+    </div>
+  </section>
+ 
+<!-- COMIDAS TÍPICAS COM RECEITAS -->
+<section class="comidas" id="comidas">
+  <h2>🍴 Sabores Típicos</h2>
+  <div class="galeria">
+
+    <!-- Item 1 - Pamonha -->
+    <input type="checkbox" id="modal-pamonha" class="modal-toggle" />
+    <label for="modal-pamonha" class="item" style="background-image: url('img/pamonha.png');">
+      <div class="legenda">Pamonha</div>
+    </label>
+    <div class="modal">
+      <label for="modal-pamonha" class="overlay"></label>
+      <div class="modal-content">
+        <h3>Receita de Pamonha</h3>
+        <ul><li>6 espigas de milho</li><li>1 xíc. de açúcar</li><li>1/2 xíc. de leite</li></ul>
+        <p>Bata tudo, coloque nas palhas e cozinhe por 40 min.</p>
+        <label for="modal-pamonha" class="fechar">Fechar</label>
+      </div>
+    </div>
+
+    <!-- Item 2 - Canjica -->
+    <input type="checkbox" id="modal-canjica" class="modal-toggle" />
+    <label for="modal-canjica" class="item" style="background-image: url('img/canjica.png');">
+      <div class="legenda">Canjica</div>
+    </label>
+    <div class="modal">
+      <label for="modal-canjica" class="overlay"></label>
+      <div class="modal-content">
+        <h3>Receita de Canjica</h3>
+        <ul><li>1 xíc. canjica branca</li><li>1 litro de leite</li><li>Coco e leite condensado</li></ul>
+        <p>Cozinhe a canjica, adicione ingredientes e ferva.</p>
+        <label for="modal-canjica" class="fechar">Fechar</label>
+      </div>
+    </div>
+
+    <!-- Item 3 - Cural -->
+    <input type="checkbox" id="modal-cural" class="modal-toggle" />
+    <label for="modal-cural" class="item" style="background-image: url('img/cural.png');">
+      <div class="legenda">Cural</div>
+    </label>
+    <div class="modal">
+      <label for="modal-cural" class="overlay"></label>
+      <div class="modal-content">
+        <h3>Receita de Cural</h3>
+        <ul><li>Milho verde</li><li>Leite</li><li>Açúcar e canela</li></ul>
+        <p>Bata tudo e cozinhe até engrossar.</p>
+        <label for="modal-cural" class="fechar">Fechar</label>
+      </div>
+    </div>
+
+    <!-- Item 4 - Milho Cozido -->
+    <input type="checkbox" id="modal-milho" class="modal-toggle" />
+    <label for="modal-milho" class="item" style="background-image: url('img/milho.png');">
+      <div class="legenda">Milho Cozido</div>
+    </label>
+    <div class="modal">
+      <label for="modal-milho" class="overlay"></label>
+      <div class="modal-content">
+        <h3>Milho Cozido</h3>
+        <ul><li>Espigas de milho</li><li>Água</li><li>Sal a gosto</li></ul>
+        <p>Cozinhe por 40 minutos com sal.</p>
+        <label for="modal-milho" class="fechar">Fechar</label>
+      </div>
+    </div>
+
+    <!-- Item 5 - Bolo de Fubá -->
+    <input type="checkbox" id="modal-bolo" class="modal-toggle" />
+    <label for="modal-bolo" class="item" style="background-image: url('img/bolo.png');">
+      <div class="legenda">Bolo de Fubá</div>
+    </label>
+    <div class="modal">
+      <label for="modal-bolo" class="overlay"></label>
+      <div class="modal-content">
+        <h3>Bolo de Fubá</h3>
+        <ul><li>3 ovos</li><li>1 xíc. fubá</li><li>1 xíc. açúcar</li></ul>
+        <p>Misture tudo e leve ao forno por 40 min.</p>
+        <label for="modal-bolo" class="fechar">Fechar</label>
+      </div>
+    </div>
+
+    <!-- Item 6 - Maçã do Amor -->
+    <input type="checkbox" id="modal-maca" class="modal-toggle" />
+    <label for="modal-maca" class="item" style="background-image: url('img/maca.png');">
+      <div class="legenda">Maçã do Amor</div>
+    </label>
+    <div class="modal">
+      <label for="modal-maca" class="overlay"></label>
+      <div class="modal-content">
+        <h3>Maçã do Amor</h3>
+        <ul><li>Maçãs</li><li>Açúcar</li><li>Corante vermelho</li></ul>
+        <p>Banhe as maçãs na calda quente e deixe secar.</p>
+        <label for="modal-maca" class="fechar">Fechar</label>
+      </div>
+    </div>
+
+    <!-- Item 7 - Cocada -->
+    <input type="checkbox" id="modal-cocada" class="modal-toggle" />
+    <label for="modal-cocada" class="item" style="background-image: url('img/cocada.png');">
+      <div class="legenda">Cocada</div>
+    </label>
+    <div class="modal">
+      <label for="modal-cocada" class="overlay"></label>
+      <div class="modal-content">
+        <h3>Cocada</h3>
+        <ul><li>Coco ralado</li><li>Açúcar</li><li>Leite condensado</li></ul>
+        <p>Cozinhe tudo até dar ponto de corte e deixe esfriar.</p>
+        <label for="modal-cocada" class="fechar">Fechar</label>
+      </div>
+    </div>
+
+    <!-- Item 8 - Pé de Moleque -->
+    <input type="checkbox" id="modal-pe" class="modal-toggle" />
+    <label for="modal-pe" class="item" style="background-image: url('img/pe-de-moleque.png');">
+      <div class="legenda">Pé de Moleque</div>
+    </label>
+    <div class="modal">
+      <label for="modal-pe" class="overlay"></label>
+      <div class="modal-content">
+        <h3>Pé de Moleque</h3>
+        <ul><li>Amendoim</li><li>Açúcar</li><li>Leite condensado</li></ul>
+        <p>Derreta o açúcar, adicione os ingredientes e espalhe em forma.</p>
+        <label for="modal-pe" class="fechar">Fechar</label>
+      </div>
+    </div>
+
+    <!-- Item 9 - Quentão -->
+    <input type="checkbox" id="modal-quentao" class="modal-toggle" />
+    <label for="modal-quentao" class="item" style="background-image: url('img/quentao.png');">
+      <div class="legenda">Quentão</div>
+    </label>
+    <div class="modal">
+      <label for="modal-quentao" class="overlay"></label>
+      <div class="modal-content">
+        <h3>Quentão</h3>
+        <ul><li>Cachaça</li><li>Gengibre</li><li>Especiarias</li></ul>
+        <p>Ferva tudo até levantar aroma e sirva quente.</p>
+        <label for="modal-quentao" class="fechar">Fechar</label>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+  <!-- Quadrilha -->
+  <section class="quadrilha">
+    <h2>💃 A Quadrilha Vai Começar!</h2>
+    <img src="img/quadrilha.png" alt="Quadrilha animada" />
+    <p>Vista sua roupa caipira, entre na dança e sinta a alegria da quadrilha iluminando a noite!</p>
+    <p> Um dos momentos mais divertidos da quadrilha é o casamento caipira, uma encenação teatral que simula um casamento
+      forçado entre um noivo fujão e uma noiva grávida, com direito a padre, sogro bravo e muita confusão.</p>
+
+    <p>Mais do que uma dança, a quadrilha representa a celebração do coletivo, da alegria popular e da cultura do interior do Brasil
+— sendo hoje preservada e reinventada tanto em escolas quanto em grandes festivais juninos nas cidades.</p>
+    </p>
+  </section>
+
+  <!-- Participe -->
+  <section class="participe">
+    <h2>🎉 Participe da Festa!</h2>
+    <p>Traga sua alegria, seu chapéu de palha e venha celebrar com a gente!</p>
+ <a href="#contato" class="botao">Quero Participar</a>
+  </section>
+<section class="contato" id="contato">
+  <h2>📬 Fale com a Gente</h2>
+  <form action="#" method="post" class="formulario">
+  <div class="campo">
+    <i class="fas fa-user"></i>
+    <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+  </div>
+
+  <div class="campo">
+    <i class="fas fa-envelope"></i>
+    <input type="email" id="email" name="email" placeholder="Seu e-mail" required>
+  </div>
+
+  <div class="campo">
+    <i class="fas fa-comment"></i>
+    <textarea id="mensagem" name="mensagem" rows="5" placeholder="Escreva sua mensagem..." required></textarea>
+  </div>
+
+  <button type="submit" onclick="document.querySelector('.mensagem-sucesso').style.display='block'; return false;">
+    <i class="fas fa-paper-plane"></i> Enviar Mensagem
+  </button>
+
+  <p class="mensagem-sucesso">🎉 Sua mensagem foi enviada com sucesso! Obrigado pelo contato!</p>
+</form>
+</section>
+
+  <!-- Rodapé -->
+  <footer>
+    <p>&copy; 2025 A Magia da Festa Junina</p>
+    <p>Desenvolvido com alegria e paçoca 🎈</p>
+  </footer>
+
+</body>
+</html>

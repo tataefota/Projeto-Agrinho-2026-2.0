@@ -1,0 +1,519 @@
+
+
+/* === VARIÁVEIS === */
+:root {
+  --rosa: #f62048;
+  --amarelo: #ffc107;
+  --verde: #28a745;
+  --azul: #17a2b8;
+  --roxo: #6f42c1;
+  --fundo: #fff8e1;
+  --textura: url
+}
+
+/* === RESET === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Leckerli One', cursive;
+  background-color: var(--fundo);
+  background-image: var(--textura);
+  color: #333;
+  scroll-behavior: smooth;
+}
+
+/* === TEXTOS === */
+h1, h2 {
+  text-align: center;
+  color: var(--rosa);
+  margin-bottom: 20px;
+  font-size: 2.0rem;
+}
+
+/* === CABEÇALHO === */
+header.cabecalho {
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+header.cabecalho img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.titulo {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -30%);
+  text-align: center;
+  color: white;
+  text-shadow: 2px 2px 6px #000;
+}
+
+.titulo h1 {
+  font-size: 3.0rem;
+}
+
+.titulo p {
+  font-size: 1.4rem;
+}
+
+
+/* === SEÇÕES === */
+section {
+  padding: 60px 20px;
+  margin: 0;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: aparecer 1s ease-out forwards;
+  animation-delay: 0.3s;
+}
+
+section#historia {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+}
+
+section + section {
+  margin-top: 0;
+}
+
+/* GRADIENTES DAS SEÇÕES */
+section:nth-of-type(1) {
+  background: linear-gradient(to right, #ffe082, #ffcc80);
+}
+section:nth-of-type(2) {
+  background: linear-gradient(to right, #f8bbd0, #f48fb1);
+}
+section:nth-of-type(3) {
+  background: linear-gradient(to right, #b3e5fc, #4fc3f7);
+}
+section:nth-of-type(4) {
+  background: linear-gradient(to right, #dcedc8, #aed581);
+}
+section.participe {
+  background: linear-gradient(to right, #ffe0b2, #ffb74d);
+  border-radius: 0;
+}
+.contato {
+  background: linear-gradient(to right, #ffe0e0, #ffcdd2);
+  text-align: center;
+}
+
+/* ENTRADA */
+@keyframes aparecer {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* === HISTÓRIA === */
+.historia .conteudo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.historia img {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 15px;
+  margin-bottom: 20px;
+}
+
+.historia p {
+  max-width: 800px;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+/* BALÃO DE FALA */
+.balao {
+  background: #fff3e0;
+  padding: 15px;
+  border-radius: 15px;
+  max-width: 300px;
+  margin: 20px auto;
+  border: 2px solid var(--amarelo);
+  position: relative;
+  font-size: 1.1rem;
+  color: #5d4037;
+}
+
+.balao::after {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: 30px;
+  border-top: 20px solid var(--amarelo);
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+}
+
+/* === GALERIA === */
+.galeria {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.item {
+  width: 250px;
+  height: 250px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 15px;
+  position: relative;
+  transition: transform 0.3s;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.2);
+}
+
+.legenda {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgba(255,255,255,0.8);
+  text-align: center;
+  padding: 10px;
+  font-weight: bold;
+  color: var(--roxo);
+}
+
+/* === QUADRILHA === */
+.quadrilha {
+  text-align: center;
+}
+
+.quadrilha img {
+  width: 100%;
+  max-width: 700px;
+  border-radius: 15px;
+  margin: 20px 0;
+}
+
+/* === PARTICIPE === */
+.participe {
+  text-align: center;
+}
+
+.botao {
+  display: inline-block;
+  background-color: var(--rosa);
+  color: white;
+  padding: 15px 30px;
+  margin-top: 20px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: background 0.3s;
+}
+
+.botao:hover {
+  background-color: var(--azul);
+}
+
+/* === FORMULÁRIO === */
+.contato h2 {
+  color: var(--rosa);
+  margin-bottom: 30px;
+}
+
+.formulario {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.formulario input,
+.formulario textarea {
+  width: 100%;
+  padding: 12px 12px 12px 40px;
+  border: 2px solid var(--rosa);
+  border-radius: 10px;
+  font-family: 'Leckerli One', cursive;
+  font-size: 1rem;
+  background-color: #fffdf9;
+  transition: border-color 0.3s;
+}
+
+.formulario input:focus,
+.formulario textarea:focus {
+  outline: none;
+  border-color: var(--roxo);
+  background-color: #fff8e1;
+}
+
+.formulario button {
+  background-color: var(--rosa);
+  color: white;
+  border: none;
+  padding: 14px;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.formulario button:hover {
+  background-color: var(--roxo);
+}
+
+/* ÍCONES */
+.campo {
+  position: relative;
+}
+
+.campo i {
+  position: absolute;
+  top: 12px;
+  left: 15px;
+  color: var(--rosa);
+  font-size: 1rem;
+}
+
+/* MENSAGEM SUCESSO */
+.mensagem-sucesso {
+  display: none;
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #d4edda;
+  color: #155724;
+  border: 2px solid #28a745;
+  border-radius: 10px;
+  font-size: 1rem;
+  animation: aparecer 0.6s ease-out forwards;
+}
+
+/* === FOGUEIRA ANIMADA === */
+.fogueira {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 120px;
+  z-index: 4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.chama {
+  position: absolute;
+  bottom: 40px;
+  width: 30px;
+  height: 30px;
+  background: orange;
+  border-radius: 50% 50% 50% 0;
+  transform: rotate(45deg);
+  opacity: 0.8;
+  animation: subir 1.5s infinite ease-in-out alternate;
+}
+
+.chama1 { background: #ff9800; left: 0; animation-delay: 0s; }
+.chama2 { background: #ff5722; left: 20px; animation-delay: 0.3s; }
+.chama3 { background: #ffc107; left: 10px; animation-delay: 0.6s; }
+
+@keyframes subir {
+  0% { transform: translateY(0) scale(1) rotate(45deg); opacity: 0.9; }
+  100% { transform: translateY(-20px) scale(1.2) rotate(45deg); opacity: 0; }
+}
+
+.troncos {
+  position: relative;
+  bottom: 0;
+  display: flex;
+  gap: 5px;
+  margin-top: 70px;
+}
+
+.tronco {
+  width: 30px;
+  height: 8px;
+  background: #5d4037;
+  border-radius: 4px;
+  transform: rotate(25deg);
+}
+.tronco:last-child {
+  transform: rotate(-25deg);
+}
+
+
+/* === MODAL === */
+.modal-toggle {
+  display: none;
+}
+
+.modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  min-height: 100vh;
+  background: rgba(0,0,0,0.6);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.modal-toggle:checked + label + .modal {
+  display: flex;
+}
+
+.modal-content {
+  background: #fff8e1;
+  padding: 30px;
+  border-radius: 15px;
+  max-width: 400px;
+  width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+  text-align: left;
+  color: #5d4037;
+  position: relative;
+}
+
+.modal-content h3 {
+  color: var(--rosa);
+  margin-bottom: 15px;
+  font-size: 1.4rem;
+}
+
+.modal-content ul {
+  padding-left: 20px;
+  margin-bottom: 10px;
+}
+
+.modal-content .fechar {
+  background: var(--rosa);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 20px;
+  display: inline-block;
+  margin-top: 15px;
+  cursor: pointer;
+}
+
+/* === RODAPÉ === */
+footer {
+  background-color: var(--verde);
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin: 0;
+}
+/* === MEDIA QUERIES PARA RESPONSIVIDADE === */
+@media (max-width: 768px) {
+  .titulo h1 {
+    font-size: 1.8rem;
+  }
+
+  .titulo p {
+    font-size: 1rem;
+  }
+
+  .item {
+    width: 90%;
+    height: 200px;
+  }
+
+  .formulario input,
+  .formulario textarea {
+    font-size: 0.95rem;
+  }
+
+  .formulario button {
+    font-size: 1rem;
+  }
+
+  .balao-esquerdo,
+  .balao-direito {
+    width: 60px;
+  }
+
+  .fogueira {
+    width: 50px;
+    height: 90px;
+  }
+
+  .chama {
+    width: 20px;
+    height: 20px;
+  }
+
+  .tronco {
+    width: 20px;
+    height: 6px;
+  }
+
+  .modal-content {
+    padding: 20px;
+    font-size: 0.95rem;
+  }
+
+  .modal-content h3 {
+    font-size: 1.2rem;
+  }
+
+  .modal-content ul {
+    padding-left: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .titulo h1 {
+    font-size: 1.5rem;
+  }
+
+  .titulo p {
+    font-size: 0.9rem;
+  }
+
+  .botao {
+    font-size: 1rem;
+    padding: 12px 24px;
+  }
+
+  .modal-content {
+    padding: 15px;
+    font-size: 0.9rem;
+  }
+
+  .modal-content h3 {
+    font-size: 1.1rem;
+  }
+
+  .historia img,
+  .quadrilha img {
+    width: 100%;
+    height: auto;
+  }
+
+  .formulario {
+    padding: 0 10px;
+  }
+}
+.galeria {
+  position: relative;
+  z-index: 1;
+}
